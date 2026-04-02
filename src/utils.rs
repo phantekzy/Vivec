@@ -5,7 +5,6 @@ pub struct ParsedUrl {
 }
 
 pub fn parse_url(url: &str) -> Result<ParsedUrl, String> {
-    let reminder = url
-        .strip_prefix("http://")
-        .ok_or("Only http is supported")?;
+    let remainder = url.strip_prefix("http://").ok_or("Only Http supported")?;
+    let (host_port, path_query) = remainder.split_once("/").unwrap_or((remainder, ""));
 }
