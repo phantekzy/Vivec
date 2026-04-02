@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 
+#[derive(Clone, Debug)]
 pub enum Method {
     GET,
     POST,
@@ -7,7 +8,8 @@ pub enum Method {
     DELETE,
 }
 
-struct Request {
+#[derive(Clone, Debug)]
+pub struct Request {
     pub method: Method,
     pub url: String,
     pub headers: HashMap<String, String>,
