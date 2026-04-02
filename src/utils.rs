@@ -3,3 +3,5 @@ pub struct ParsedUrl {
     pub port: String,
     pub path: String,
 }
+
+pub fn parse_url(url: &str) -> Result<ParsedUrl, String> {}
