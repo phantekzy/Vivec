@@ -19,6 +19,8 @@ pub struct Request {
 impl Request {
     pub fn new(method: Method, url: &str) -> Self {
         let mut headers = HashMap::new();
-        headers.insert("User-Agent".to_string(), "Vivec/1.0".to_string());
+        headers.insert("User-Agent".to_string(), "Vivec".to_string());
+        headers.insert("Connection".to_string(), "close".to_string());
+        headers.insert("Accept".to_string(), "*/*".to_string());
     }
 }
