@@ -17,5 +17,10 @@ pub struct Request {
 }
 
 impl Request {
-    pub fn new(method: Method, url: &str) -> Self {}
+    pub fn new(method: Method, url: &str) -> Self {
+        let headers = HashMap::new();
+        headers.insert("User-Agent".to_string(), "xsus".to_string());
+        headers.insert("Connection".to_string(), "close".to_string());
+        headers.insert("Accept".to_string(), "*/*".to_string());
+    }
 }
