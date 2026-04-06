@@ -1,6 +1,12 @@
 [package]
 name = "xsus"
 version = "0.1.0"
+authors = ["Maini Lotfi Abdelkader <mainilotfi@gmail.com>"]
 edition = "2024"
+description = "Native HTTP Client Library"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/phantekzy/xsus"
+keywords = ["http", "client", "native", "zero-dependency", "security"]
+categories = ["network-programming", "no-std"]
 
 [dependencies]
