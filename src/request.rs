@@ -43,6 +43,9 @@ impl Request {
 
         for (k, v) in &self.headers {
             let key_low = k.to_lowercase();
+            if key_low != "host" && key_low != "content-length" {
+                raw.push_str(&format!("{}:{}\r\n", k, v));
+            }
         }
     }
 }
