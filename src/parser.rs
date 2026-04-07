@@ -17,4 +17,16 @@ pub fn parse_response(raw: &str) -> Result<Result, XsusError> {
     let mut headers = HashMap::new();
     let mut body = String::new();
     let mut is_body = false;
+
+    for line in lines {
+        if line.is_empty() {
+            is_body = true;
+            continue;
+        }
+        if !is_body {
+            if let Some((k, v)) = line.split_once(": ") {
+                headers.insert(k.to_lowercase(), v.to_string());
+            }
+        }
+    }
 }
