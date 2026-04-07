@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 use crate::error::XsusError;
 
 pub fn parse_response(raw: &str) -> Result<Result, XsusError> {
@@ -11,4 +13,8 @@ pub fn parse_response(raw: &str) -> Result<Result, XsusError> {
         .nth(1)
         .and_then(|s| s.parse::<u16>().ok())
         .ok_or(XsusError::Parse("Invalid status code".into()))?;
+
+    let mut headers = HashMap::new();
+    let mut body = String::new();
+    let mut is_body = false;
 }
