@@ -9,5 +9,11 @@ pub struct Xsus {
 }
 
 impl Xsus {
-    pub fn new(base_url: &str) -> Self {}
+    pub fn new(base_url: &str) -> Self {
+        Self {
+            base_url: base_url.to_string(),
+            timeout: Duration::from_secs(10),
+            interceptors: Interceptors::new(),
+        }
+    }
 }
