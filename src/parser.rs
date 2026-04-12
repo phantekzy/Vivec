@@ -1,6 +1,5 @@
-use std::collections::HashMap;
-
 use crate::{error::XsusError, response::Response};
+use std::collections::HashMap;
 
 pub fn parse_response(raw: &str) -> Result<Response, XsusError> {
     let mut lines = raw.lines();
