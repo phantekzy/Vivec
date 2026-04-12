@@ -1,8 +1,15 @@
-# Xsus 0.1.2: A Simple and Powerful Web Tool for Rust
 
 <p align="left">
-  <img src="xsusLogo.png" width="600" alt="Xsus Logo">
+  <img src="xsusLogo.png" width="800" alt="Xsus Logo">
 </p>
+
+## What is Xsus?
+
+Xsus is a tool built for the Rust programming language that allows your computer to talk to websites and servers. Unlike other tools that rely on many external parts, Xsus is built using only the basic parts of Rust. This makes it very small, fast, and easy to understand.
+
+When you use Xsus, you are talking directly to the internet. It doesn't hide what is happening under the hood, which makes it perfect for people who want to learn how the web works or who want to build very clean software.
+
+---
 
 ## Table of Contents
 * [What is Xsus?](#what-is-xsus)
@@ -12,14 +19,6 @@
 * [Project Goals](#project-goals)
 * [Maintainer](#maintainer)
 * [License](#license)
-
----
-
-## What is Xsus?
-
-Xsus is a tool built for the Rust programming language that allows your computer to talk to websites and servers. Unlike other tools that rely on many external parts, Xsus is built using only the basic parts of Rust. This makes it very small, fast, and easy to understand.
-
-When you use Xsus, you are talking directly to the internet. It doesn't hide what is happening under the hood, which makes it perfect for people who want to learn how the web works or who want to build very clean software.
 
 ---
 
