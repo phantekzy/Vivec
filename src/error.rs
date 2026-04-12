@@ -14,11 +14,11 @@ impl std::error::Error for XsusError {}
 impl fmt::Display for XsusError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            XsusError::Io(e) => write!(f, "IO Error : {}", e),
-            XsusError::Parse(s) => write!(f, "Parsing Error : {}", s),
-            XsusError::Network(s) => writeln!(f, "Network Error : {}", s),
-            XsusError::InvalidUrl(u) => writeln!(f, "Invalid URL : {}", u),
-            XsusError::Timeout => writeln!(f, "Request timed out"),
+            XsusError::Io(e) => write!(f, "IO Error: {}", e),
+            XsusError::Parse(s) => write!(f, "Parsing Error: {}", s),
+            XsusError::Network(s) => write!(f, "Network Error: {}", s),
+            XsusError::InvalidUrl(u) => write!(f, "Invalid URL: {}", u),
+            XsusError::Timeout => write!(f, "Request timed out"),
         }
     }
 }
