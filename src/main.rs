@@ -2,21 +2,24 @@ use xsus::Xsus;
 
 fn main() {
     let mut client = Xsus::new("http://example.com");
+
     client.interceptors.request.push(Box::new(|mut req| {
-        req.headers.insert(
-            "X-Custom-Auth".to_string(),
-            "Xsus-Security-Token".to_string(),
-        );
+        req.headers
+            .insert("X-Provider".to_string(), "Xsus-Native".to_string());
         req
     }));
 
-    println!("Sending Xsus Request !...");
+    println!("Sending Xsus Request to example.com...");
 
     match client.get("/") {
         Ok(res) => {
-            println!("Status: {}", res.status);
+            println!("Success! Status: {}", res.status);
             println!("Headers: {:?}", res.headers);
-            println!("Data Snippet: {}", &res.data[..50]);
+            if res.data.len() > 50 {
+                println!("Data: {}...", &res.data[..50]);
+            } else {
+                println!("Data: {}", res.data);
+            }
         }
         Err(e) => eprintln!("Xsus Error: {}", e),
     }
