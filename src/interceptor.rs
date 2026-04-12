@@ -7,7 +7,6 @@ pub struct Interceptors {
     pub request: Vec<RequestInterceptor>,
     pub response: Vec<ResponseInterceptor>,
 }
-
 impl Interceptors {
     pub fn new() -> Self {
         Self {
